@@ -10,4 +10,11 @@ public class ConductoresTest {
         Conductores conductor = new Conductores("Adrian", "Mercedes A", "7JKK555");
         System.out.println(conductor.getNombre());
     }
+
+    @Test
+    public void testSetValoracion() {
+        Conductores conductor = new Conductores("Adrian", "Mercedes A", "7JKK555");
+        conductor.setValoracion(4.0);
+        assertEquals(4.0, conductor.getValoracion(), 0.01);
+    }
 }

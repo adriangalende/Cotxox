@@ -4,6 +4,7 @@ public class Conductores {
     private String nombre = "";
     private String modelo = "";
     private String matricula = "";
+    private double valoracion = 0.0d;
 
     public Conductores() {
 
@@ -25,6 +26,14 @@ public class Conductores {
 
     public String getMatricula() {
         return this.matricula;
+    }
+
+    public void setValoracion(double valoracion) {
+        this.valoracion = valoracion;
+    }
+
+    public double getValoracion() {
+        return this.valoracion;
     }
 
 
