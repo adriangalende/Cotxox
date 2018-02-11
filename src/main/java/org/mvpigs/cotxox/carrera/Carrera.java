@@ -5,6 +5,7 @@ public class Carrera {
     private String origen = "";
     private String destino = "";
     private double distancia = 0.0d;
+    private int tiempoEsperado = 0;
 
     public Carrera() {
 
@@ -40,5 +41,13 @@ public class Carrera {
 
     public double getDistancia() {
         return this.distancia;
+    }
+
+    public void setTiempoEsperado(int tiempoEsperado) {
+        this.tiempoEsperado = tiempoEsperado;
+    }
+
+    public int getTiempoEsperado() {
+        return this.tiempoEsperado;
     }
 }
