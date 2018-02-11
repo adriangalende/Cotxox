@@ -3,6 +3,7 @@ package org.mvpigs.cotxox.carrera;
 public class Carrera {
     private String tarjetaCredito = "";
     private String origen = "";
+    private String destino = "";
 
     public Carrera() {
 
@@ -24,6 +25,12 @@ public class Carrera {
         return this.origen;
     }
 
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
 
+    public String getDestino() {
+        return this.destino;
+    }
 
 }

@@ -24,4 +24,15 @@ public class CarreraTest{
         
     }
 
+    @Test
+    public void testGetDestino() {
+        String tarjetaCredito = "4916119711304546";
+        String destino = "Magaluf";
+
+        Carrera carrera = new Carrera(tarjetaCredito);
+        carrera.setDestino(destino);
+        assertEquals(destino, carrera.getDestino());
+        
+    }
+
 }
