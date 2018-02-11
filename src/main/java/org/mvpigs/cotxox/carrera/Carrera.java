@@ -1,5 +1,7 @@
 package org.mvpigs.cotxox.carrera;
 
+import org.mvpigs.cotxox.tarifa.Tarifa;
+
 public class Carrera {
     private String tarjetaCredito = "";
     private String origen = "";
@@ -49,5 +51,9 @@ public class Carrera {
 
     public int getTiempoEsperado() {
         return this.tiempoEsperado;
+    }
+
+    public double getCosteEsperado() {
+        return Tarifa.getCosteTotalEsperado(this);
     }
 }

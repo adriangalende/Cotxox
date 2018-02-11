@@ -1,6 +1,7 @@
 package org.mvpigs.cotxox;
 
 import org.mvpigs.cotxox.carrera.*;
+import org.mvpigs.cotxox.tarifa.Tarifa;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -55,5 +56,21 @@ public class CarreraTest {
         carrera.setTiempoEsperado(tiempoEsperadoMinutos);
         assertEquals(tiempoEsperadoMinutos, carrera.getTiempoEsperado());      
     }
+
+    @Test
+    public void testgetCosteEsperado() {
+        String tarjetaCredito = "4916119711304546";
+        int tiempoEsperadoMinutos = 10;
+        double distancia = 7.75;
+
+        Carrera carrera = new Carrera(tarjetaCredito);
+        carrera.setTiempoEsperado(tiempoEsperadoMinutos);    
+        carrera.setDistancia(distancia);
+
+        Tarifa tarifa = new Tarifa();
+        
+        assertEquals(16.755, carrera.getCosteEsperado(), 0.01);
+    }
+
 
 }

@@ -40,8 +40,6 @@ public class TarifaTest {
         carrera.setDistancia(distancia);
 
         Tarifa tarifa = new Tarifa();
-        tarifa.getCosteTotalEsperado(carrera);
-        System.out.println(tarifa.getCosteTotalEsperado(carrera));
         assertEquals(16.755, tarifa.getCosteTotalEsperado(carrera), 0.01);
     }
 }
