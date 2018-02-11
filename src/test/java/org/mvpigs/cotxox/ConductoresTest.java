@@ -15,6 +15,24 @@ public class ConductoresTest {
     public void testSetValoracion() {
         Conductores conductor = new Conductores("Adrian", "Mercedes A", "7JKK555");
         conductor.setValoracion(4.0);
-        assertEquals(4.0, conductor.getValoracion(), 0.01);
+        assertEquals(4.0, conductor.getValoracionMedia(), 0.01);
+    }
+
+    @Test
+    public void testValoracionMedia() {
+        Conductores conductor = new Conductores("Adrian", "Mercedes A", "7JKK555");
+
+        conductor.setValoracion(4.0);
+        conductor.setValoracion(4.0);
+        conductor.setValoracion(4.0);
+        conductor.setValoracion(2.0);
+
+        assertEquals(3.5, conductor.getValoracionMedia(), 0.01);        
+    }
+
+    @Test
+    public void testConductorOcupado() {
+        Conductores conductor = new Conductores("Adrian", "Mercedes A", "7JKK555");
+        assertEquals(false, conductor.isOcupado());
     }
 }
