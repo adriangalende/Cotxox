@@ -1,6 +1,7 @@
 package org.mvpigs.cotxox.carrera;
 
 import org.mvpigs.cotxox.tarifa.Tarifa;
+import org.mvpigs.cotxox.conductores.*;
 
 public class Carrera {
     private String tarjetaCredito = "";
@@ -8,6 +9,7 @@ public class Carrera {
     private String destino = "";
     private double distancia = 0.0d;
     private int tiempoEsperado = 0;
+    private Conductor conductor = null;
 
     public Carrera() {
 
@@ -55,5 +57,17 @@ public class Carrera {
 
     public double getCosteEsperado() {
         return Tarifa.getCosteTotalEsperado(this);
+    }
+
+    public void setConductor(Conductor conductor) {
+        this.conductor = conductor;
+    }
+
+    public Conductor getConductor() {
+        return this.conductor;
+    }
+
+    public void asignarConductor(PoolConductores poolConductores) {
+        setConductor(poolConductores.asignarConductor());
     }
 }

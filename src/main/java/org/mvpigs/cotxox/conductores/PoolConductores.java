@@ -18,6 +18,9 @@ public class PoolConductores {
         for (Conductor conductor:getPoolConductores()){
             if (!(conductor.isOcupado())){
                 chofer = new Conductor(conductor.getNombre());
+                chofer.setModelo(conductor.getModelo());
+                chofer.setMatricula(conductor.getMatricula());
+                chofer.setValoracion(conductor.getValoracionMedia());
                 chofer.setOcupado(true);
                 return chofer;
             } else {} // el conductor esta ocupado, ignorar
