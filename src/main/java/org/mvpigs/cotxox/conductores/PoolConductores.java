@@ -13,4 +13,16 @@ public class PoolConductores {
         return this.poolConductores;
     }
 
+    public Conductor asignarConductor() {
+        Conductor chofer;
+        for (Conductor conductor:getPoolConductores()){
+            if (!(conductor.isOcupado())){
+                chofer = new Conductor(conductor.getNombre());
+                chofer.setOcupado(true);
+                return chofer;
+            } else {} // el conductor esta ocupado, ignorar
+        }
+        return null;
+    }
+
 }

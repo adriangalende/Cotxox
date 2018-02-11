@@ -55,6 +55,10 @@ public class Conductor {
         return valoracionMedia / valoracion.size();
     }
 
+    public void setOcupado(boolean ocupado) {
+        this.ocupado = ocupado;
+    }
+
     public boolean isOcupado() {
         return this.ocupado;
     }
@@ -62,7 +66,8 @@ public class Conductor {
     @Override
     public String toString() {
         return "Conductor: " + this.getNombre() + ", modelo de coche: " + this.getModelo() + "  matricula: " +
-                this.getMatricula() + ", puntuacion media: " + this.getValoracionMedia();
+                this.getMatricula() + ", puntuacion media: " + this.getValoracionMedia() + " esta ocupad@?: " +
+                this.isOcupado();
     }
 
 
