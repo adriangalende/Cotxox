@@ -133,5 +133,42 @@ public class CarreraTest {
         assertEquals(1, carrera.getPropina());       
     }
 
+    @Test
+    public void testLiberarConductor() {
+        String tarjetaCredito = "4916119711304546";
+        Carrera carrera = new Carrera(tarjetaCredito);
+
+		ArrayList<Conductor> poolConductores = new ArrayList();
+        Conductor conductor = null;
+        
+        String[] nombres = { "Samantha", "Fox", "Mola" };
+        
+		for (String nombre : nombres) {
+			conductor = new Conductor(nombre);
+			poolConductores.add(conductor);
+		}
+
+		String[] matricula = { "4ABC123", "5DHJ444", "7JKK555" };
+		String[] modelos = { "Chevy Malibu", "Toyota Prius", "Mercedes A" };
+
+		int index = 0;
+		// conductora.getClass().getFields();
+		for (Conductor conductora : poolConductores) {
+			conductora.setMatricula(matricula[index]);
+			conductora.setModelo(modelos[index]);
+			// suponemos que las conductoras tienen una valoracion inicial de 4 stars
+			conductora.setValoracion(4.0);
+			index++;
+		} 
+		
+		// Creamos el objeto flota de conductores, de la clase PoolConductores.
+
+		PoolConductores conductores = new PoolConductores(poolConductores);
+        
+        carrera.asignarConductor(conductores);
+        carrera.liberarConductor();
+        assertEquals(false, carrera.getConductor().isOcupado());
+    }
+
 
 }

@@ -97,4 +97,8 @@ public class Carrera {
         setPropina(propina);
     }
 
+    public void liberarConductor() {
+        getConductor().setOcupado(false);
+    }
+
 }
