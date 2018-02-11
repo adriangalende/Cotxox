@@ -4,6 +4,7 @@ public class Carrera {
     private String tarjetaCredito = "";
     private String origen = "";
     private String destino = "";
+    private double distancia = 0.0d;
 
     public Carrera() {
 
@@ -33,4 +34,11 @@ public class Carrera {
         return this.destino;
     }
 
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    public double getDistancia() {
+        return this.distancia;
+    }
 }
