@@ -10,6 +10,7 @@ public class Carrera {
     private double distancia = 0.0d;
     private int tiempoEsperado = 0;
     private Conductor conductor = null;
+    private double costeTotal = 0.0d;
 
     public Carrera() {
 
@@ -70,4 +71,19 @@ public class Carrera {
     public void asignarConductor(PoolConductores poolConductores) {
         setConductor(poolConductores.asignarConductor());
     }
+
+    public double getCosteTotal() {
+        return this.costeTotal;
+    }
+
+    public void setCosteTotal(double costeTotal){
+        this.costeTotal = costeTotal;
+    }
+
+    public void realizarPago(double pago) {
+        setCosteTotal(pago);
+    }
+
+    
+
 }

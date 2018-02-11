@@ -70,8 +70,6 @@ public class CarreraTest {
         Carrera carrera = new Carrera(tarjetaCredito);
         carrera.setTiempoEsperado(tiempoEsperadoMinutos);    
         carrera.setDistancia(distancia);
-
-        Tarifa tarifa = new Tarifa();
         
         assertEquals(16.755, carrera.getCosteEsperado(), 0.01);
     }
@@ -112,6 +110,19 @@ public class CarreraTest {
 
         System.out.println(carrera.getConductor().toString());
 
+    }
+
+    @Test
+    public void testRealizarPago() {
+        String tarjetaCredito = "4916119711304546";
+        int tiempoEsperadoMinutos = 10;
+        double distancia = 7.75;
+
+        Carrera carrera = new Carrera(tarjetaCredito);
+        carrera.setTiempoEsperado(tiempoEsperadoMinutos);    
+        carrera.setDistancia(distancia);
+        carrera.realizarPago(carrera.getCosteEsperado());
+        assertEquals(carrera.getCosteEsperado(), carrera.getCosteTotal(), 0.01);
     }
 
 
