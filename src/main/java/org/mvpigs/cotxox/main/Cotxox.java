@@ -50,7 +50,7 @@ public class Cotxox {
 		 * La flota es un objeto de tipo PoolConductores.
 		 */
 
-		ArrayList<Conductor> poolConductores = new ArrayList<>();
+		ArrayList<Conductor> poolConductores = new ArrayList();
 		Conductor conductor = null;
 
 		// creamos objetos conductor y los metemos en el array

@@ -48,6 +48,10 @@ public class Conductor {
         this.valoracion.add(valoracion);
     }
 
+    public double getValoracion() {
+        return valoracion.get(valoracion.size()-1);
+    }
+
     public double getValoracionMedia() {
         for (double puntuacion:valoracion) {
             valoracionMedia += puntuacion;
