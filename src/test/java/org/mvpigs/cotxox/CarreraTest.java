@@ -13,4 +13,15 @@ public class CarreraTest{
         assertEquals(tarjetaCredito, carrera.getTarjetaCredito());
     }
 
+    @Test
+    public void testGetOrigen() {
+        String tarjetaCredito = "4916119711304546";
+        String origen = "Aeroport Son Sant Joan";
+
+        Carrera carrera = new Carrera(tarjetaCredito);
+        carrera.setOrigen(origen);
+        assertEquals(origen, carrera.getOrigen());
+        
+    }
+
 }
