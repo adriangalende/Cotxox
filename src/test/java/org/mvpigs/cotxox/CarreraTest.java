@@ -125,5 +125,13 @@ public class CarreraTest {
         assertEquals(carrera.getCosteEsperado(), carrera.getCosteTotal(), 0.01);
     }
 
+    @Test
+    public void testRecibirPropina() {
+        String tarjetaCredito = "4916119711304546";
+        Carrera carrera = new Carrera(tarjetaCredito);
+        carrera.recibirPropina(1);
+        assertEquals(1, carrera.getPropina());       
+    }
+
 
 }

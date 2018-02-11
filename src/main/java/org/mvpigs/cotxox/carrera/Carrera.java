@@ -11,6 +11,7 @@ public class Carrera {
     private int tiempoEsperado = 0;
     private Conductor conductor = null;
     private double costeTotal = 0.0d;
+    private int propina = 0;
 
     public Carrera() {
 
@@ -76,7 +77,7 @@ public class Carrera {
         return this.costeTotal;
     }
 
-    public void setCosteTotal(double costeTotal){
+    public void setCosteTotal(double costeTotal) {
         this.costeTotal = costeTotal;
     }
 
@@ -84,6 +85,16 @@ public class Carrera {
         setCosteTotal(pago);
     }
 
-    
+    public void setPropina(int propina) {
+        this.propina = propina;
+    }
+
+    public int getPropina() {
+        return this.propina;
+    }
+
+    public void recibirPropina(int propina) {
+        setPropina(propina);
+    }
 
 }
