@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.mvpigs.cotxot</groupId>
-  <artifactId>cotxot</artifactId>
+  <groupId>org.mvpigs.cotxox</groupId>
+  <artifactId>cotxox</artifactId>
   <version>.jar</version>
   <packaging>jar</packaging>
 
-  <name>cotxot</name>
+  <name>cotxox</name>
   <url>http://maven.apache.org</url>
 
   <properties>
